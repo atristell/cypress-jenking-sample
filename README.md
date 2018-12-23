@@ -1,1 +1,1 @@
-# ember-cypress-jenking-sample
+# cypress-jenking-sample
