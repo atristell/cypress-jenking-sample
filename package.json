@@ -4,6 +4,7 @@
   "description": "Cypress Tester",
   "repository": "https://github.com/atristell/cypress-jenkins-ci",
   "scripts": {
+    "test": "$(npm bin)/cypress open --project ./tareas --env configFile=development",
     "test:ci": "$(npm bin)/cypress run --project ./tareas --env configFile=development"
   },
   "author": "atristell",

@@ -1,5 +1,5 @@
 {
-    "baseUrl": "https://google.com/",
+    "baseUrl": "https://www.google.es/",
     "env": {
         "env": "PRODUCTION"
     }
