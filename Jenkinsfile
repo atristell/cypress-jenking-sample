@@ -79,7 +79,7 @@ pipeline {
     }
     success {
       echo 'I succeeeded!'
-      mail to: 'agarciat@eprinsa.es',
+       mail to: 'agarciat@eprinsa.es',
         subject: "Correct Pipeline: ${currentBuild.fullDisplayName}",
         body: "Something is wrong with ${env.BUILD_URL}"
     }
@@ -93,5 +93,5 @@ pipeline {
       echo 'Things were different before...'
     }
   }
-  
+
 }
