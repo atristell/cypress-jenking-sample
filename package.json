@@ -16,8 +16,8 @@
     "lint:js": "eslint .",
     "start": "ember serve",
     "test": "ember test",
-    "teste2e": "$(npm bin)/cypress open --project ./tareas --env configFile=development",
-    "teste2e:ci": "$(npm bin)/cypress run --project ./tareas --env configFile=development"
+    "teste2e": "$(npm bin)/cypress open --project ./tests/e2e --env configFile=development",
+    "teste2e:ci": "$(npm bin)/cypress run --project ./tests/e2e --env configFile=development"
   },
   "devDependencies": {
     "@ember/jquery": "^0.5.2",
