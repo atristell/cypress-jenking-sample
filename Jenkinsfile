@@ -63,7 +63,7 @@ pipeline {
 
     stage('test ember') {
       steps {
-        sh 'ember test'
+        sh 'node_modules/.bin/ember test'
       }
     }    
     
