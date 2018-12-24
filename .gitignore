@@ -1,0 +1,5 @@
+/tareas/cypress/videos
+/tareas/cypress/screenshots
+/node_modules
+/.sonarlint
+.DS_Store

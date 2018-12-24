@@ -1,0 +1,6 @@
+{
+    "baseUrl": "https://google.come/",
+    "env": {
+        "env": "ALL"
+    }
+}

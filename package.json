@@ -1,0 +1,14 @@
+{
+  "name": "cypresstester",
+  "version": "1.0.0",
+  "description": "Cypress Tester",
+  "main": "index.js",
+  "scripts": {
+    "test:ci": "$(npm bin)/cypress run --project ./tareas --env configFile=development"
+  },
+  "author": "atristell",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^3.1.3"
+  }
+}
