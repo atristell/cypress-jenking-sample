@@ -43,6 +43,16 @@ pipeline {
 
   stages {
     // first stage installs node dependencies and Cypress binary
+    stage('install') {
+      steps {
+        // there a few default environment variables on Jenkins
+        // on local Jenkins machine (assuming port 8080) see
+        // http://localhost:8080/pipeline-syntax/globals#env
+        echo "Running build ${env.BUILD_ID} on ${env.JENKINS_URL}"
+        sh 'npm install'
+      }
+    }
+    
     stage('test') {
       steps {
         // there a few default environment variables on Jenkins
@@ -52,10 +62,8 @@ pipeline {
         sh 'node --version'
         sh 'node_modules/.bin/cypress verify'
         sh 'node_modules/.bin/cypress --version'
-
-        //sh 'npm ci'
-        //sh 'npm run cy:verify'
       }
     }
+    
   }
 }
