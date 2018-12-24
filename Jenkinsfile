@@ -57,7 +57,7 @@ pipeline {
         sh 'npm install'
         sh 'node_modules/.bin/cypress verify'
         sh 'node_modules/.bin/cypress --version'
-        sh 'ember -v'
+        sh 'node_modules/.bin/ember -v'
       }
     }
 
