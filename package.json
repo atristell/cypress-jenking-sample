@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "Cypress Tester",
   "repository": "https://github.com/atristell/cypress-jenkins-ci",
-  "main": "index.js",
   "scripts": {
     "test:ci": "$(npm bin)/cypress run --project ./tareas --env configFile=development"
   },
