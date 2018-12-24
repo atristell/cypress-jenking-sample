@@ -53,6 +53,13 @@ pipeline {
         // on local Jenkins machine (assuming port 8080) see
         // http://localhost:8080/pipeline-syntax/globals#env
         echo "Running build ${env.BUILD_ID} on ${env.JENKINS_URL}"
+        sh 'apt-get update'
+        sh 'apt-get install -y libappindicator1 fonts-liberation'
+        sh 'wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb'
+        sh 'sudo dpkg -i google-chrome*.deb'
+        sh 'google-chrome --version'
+
+        
         sh 'node --version'
         sh 'npm install'
         sh 'node_modules/.bin/cypress verify'
