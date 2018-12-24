@@ -40,6 +40,10 @@ pipeline {
       image 'cypress/base:10'
     }
   }
+  
+  environment { 
+    CI = 'true'
+  }
 
   stages {
     // first stage installs node dependencies and Cypress binary
