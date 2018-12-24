@@ -7,7 +7,7 @@
     "test": "$(npm bin)/cypress open --project ./tareas --env configFile=development",
     "test:ci": "$(npm bin)/cypress run --project ./tareas --env configFile=development"
   },
-  "author": "atristell",
+  "author": "agarciat",
   "license": "MIT",
   "devDependencies": {
     "cypress": "^3.1.3"

@@ -69,6 +69,29 @@ pipeline {
         sh 'npm run test:ci'
       }
     }
+
+    post {
+      always {
+        echo 'One way or another, I have finished'
+          junit 'build/reports/**/*.xml'
+          //deleteDir() /* clean up our workspace */
+      }
+      success {
+        echo 'I succeeeded!'
+        mail to: 'agarciat@eprinsa.es',
+          subject: "Correct Pipeline: ${currentBuild.fullDisplayName}",
+          body: "Something is wrong with ${env.BUILD_URL}"
+      }
+      unstable {
+        echo 'I am unstable :/'
+      }
+      failure {
+        echo 'I failed :('
+      }
+      changed {
+        echo 'Things were different before...'
+      }
+    }
     
   }
 }
