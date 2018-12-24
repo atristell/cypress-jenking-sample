@@ -1,1 +1,1 @@
-# cypress-jenking-sample
+# cypress-jenking-ci
