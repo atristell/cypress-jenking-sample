@@ -70,7 +70,7 @@ pipeline {
 
     stage('test ember') {
       steps {
-        sh 'node_modules/.bin/ember test'
+        sh 'COVERAGE=true node_modules/.bin/ember test'
       }
     }    
     
