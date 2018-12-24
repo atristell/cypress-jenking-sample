@@ -57,7 +57,7 @@ pipeline {
       }
     }
     
-    stage('test') {
+    stage('test e2e') {
       steps {
         // there a few default environment variables on Jenkins
         // on local Jenkins machine (assuming port 8080) see
@@ -66,7 +66,7 @@ pipeline {
         sh 'node --version'
         sh 'node_modules/.bin/cypress verify'
         sh 'node_modules/.bin/cypress --version'
-        sh 'npm run test:ci'
+        sh 'npm run teste2e:ci'
       }
     }    
   }
@@ -81,7 +81,7 @@ pipeline {
       echo 'I succeeeded!'
        mail to: 'agarciat@eprinsa.es',
         subject: "Correct Pipeline: ${currentBuild.fullDisplayName}",
-        body: "Something is wrong with ${env.BUILD_URL}"
+        body: "Todo OK ${env.BUILD_URL}"
     }
     unstable {
       echo 'I am unstable :/'
