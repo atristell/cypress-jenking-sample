@@ -53,19 +53,22 @@ pipeline {
         // on local Jenkins machine (assuming port 8080) see
         // http://localhost:8080/pipeline-syntax/globals#env
         echo "Running build ${env.BUILD_ID} on ${env.JENKINS_URL}"
+        sh 'node --version'
         sh 'npm install'
+        sh 'node_modules/.bin/cypress verify'
+        sh 'node_modules/.bin/cypress --version'
+        sh 'ember -v'
       }
     }
+
+    stage('test ember') {
+      steps {
+        sh 'ember test'
+      }
+    }    
     
     stage('test e2e') {
       steps {
-        // there a few default environment variables on Jenkins
-        // on local Jenkins machine (assuming port 8080) see
-        // http://localhost:8080/pipeline-syntax/globals#env
-        echo "Running build ${env.BUILD_ID} on ${env.JENKINS_URL}"
-        sh 'node --version'
-        sh 'node_modules/.bin/cypress verify'
-        sh 'node_modules/.bin/cypress --version'
         sh 'npm run teste2e:ci'
       }
     }    
