@@ -1,6 +1,6 @@
 describe('Google Search', function() {
   it('Cypress.json', function() {
     cy.log(Cypress.config())
-    expected(true).to.be(false) 
+    expect(1).to.eq(2) 
   })
 })
