@@ -38,7 +38,7 @@ pipeline {
     // this image provides everything needed to run Cypress
     docker {
       //image 'cypress/base:10'
-      image 'atristell/prueba:latest'
+      image 'atristell/prueba:0.0.1'
     }
   }
   
