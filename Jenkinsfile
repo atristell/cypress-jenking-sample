@@ -78,26 +78,26 @@ pipeline {
   }
 
   post {
-    always {
-      //echo 'One way or another, I have finished'
-        //junit 'build/reports/**/*.xml'
-        //deleteDir() /* clean up our workspace */
-    }
+    /* always {
+      echo 'One way or another, I have finished'
+      
+       
+    } */
     success {
       echo 'I succeeeded!'
        mail to: 'agarciat@eprinsa.es',
         subject: "Correct Pipeline: ${currentBuild.fullDisplayName}",
         body: "Todo OK ${env.BUILD_URL}"
     }
-    unstable {
-      //echo 'I am unstable :/'
-    }
+    /* unstable {
+      echo 'I am unstable :/'
+    } */
     failure {
       echo 'I failed :('
     }
-    changed {
-      //echo 'Things were different before...'
-    }
+    /* changed {
+      echo 'Things were different before...'
+    } */
   }
 
 }
