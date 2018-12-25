@@ -18,3 +18,7 @@
 /.node_modules.ember-try/
 /bower.json.ember-try
 /package.json.ember-try
+
+# cypress
+/tests_e2e/cypress/videos
+/tests_e2e/cypress/screenshots
