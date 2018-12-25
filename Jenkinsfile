@@ -58,14 +58,14 @@ pipeline {
         //sh 'wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb'
         //sh 'dpkg -i google-chrome-stable_current_amd64.deb'
         
-        sh 'google-chrome --version'
+        //sh 'google-chrome --version'
 
         
-        sh 'node --version'
+        //sh 'node --version'
         sh 'npm install'
-        sh 'node_modules/.bin/cypress verify'
-        sh 'node_modules/.bin/cypress --version'
-        sh 'node_modules/.bin/ember -v'
+        //sh 'node_modules/.bin/cypress verify'
+        //sh 'node_modules/.bin/cypress --version'
+        //sh 'node_modules/.bin/ember -v'
       }
     }
 
@@ -84,7 +84,7 @@ pipeline {
 
   post {
     always {
-      echo 'One way or another, I have finished'
+      //echo 'One way or another, I have finished'
         //junit 'build/reports/**/*.xml'
         //deleteDir() /* clean up our workspace */
     }
@@ -95,13 +95,13 @@ pipeline {
         body: "Todo OK ${env.BUILD_URL}"
     }
     unstable {
-      echo 'I am unstable :/'
+      //echo 'I am unstable :/'
     }
     failure {
       echo 'I failed :('
     }
     changed {
-      echo 'Things were different before...'
+      //echo 'Things were different before...'
     }
   }
 
